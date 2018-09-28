@@ -1,0 +1,31 @@
+{
+  "name": "minewfriend",
+  "version": "1.0.0",
+  "description": "localizacion y adopcion de mascotas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adopcion",
+    "node.js",
+    "react"
+  ],
+  "author": "Eduardo Avila",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jest": "^23.6.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "redux": "^4.0.0",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4"
+  }
+}
