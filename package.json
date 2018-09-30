@@ -4,7 +4,9 @@
   "description": "localizacion y adopcion de mascotas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "liveS": "webpack-dev-server --env.dev",
+    "build": "webpack --env.prod"
   },
   "keywords": [
     "adopcion",
@@ -14,6 +16,9 @@
   "author": "Eduardo Avila",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "express": "^4.16.3",
     "jest": "^23.6.0",
     "react": "^16.5.2",
@@ -24,8 +29,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.4"
+    "babel-loader": "^8.0.4",
+    "webpack-cli": "^3.1.2"
   }
 }
