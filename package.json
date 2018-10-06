@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "liveS": "webpack-dev-server --env.dev",
+    "liveS": "webpack-dev-server --env.dev --host 192.168.43.87 --hot --port 9999",
     "build": "webpack --env.prod"
   },
   "keywords": [
