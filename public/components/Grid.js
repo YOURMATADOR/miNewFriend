@@ -25,11 +25,19 @@ import WhereToVoteIcon from "@material-ui/icons/WhereToVote";
 import CategoryIcon from "@material-ui/icons/Category";
 
 import ImgAvatar from "./Avatar";
-import Noticia from './Noticia'
+import Noticia from "./Noticia";
+import Footer from "./Footer";
 
 const secundario = cyan[300];
 const primario = pink[400];
-const imagenes = ['perroUno.jpg','perroDos.jpg','perroTres.jpg','perroCuatro.jpg','perroCinco.jpg','perroSeis.jpg'];
+const imagenes = [
+  "perroUno.jpg",
+  "perroDos.jpg",
+  "perroTres.jpg",
+  "perroCuatro.jpg",
+  "perroCinco.jpg",
+  "perroSeis.jpg"
+];
 /* jshint ignore:start */
 const styles = theme => ({
   root: {
@@ -54,17 +62,17 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center"
   },
-  navegacion:{
-      alignSelf:'center',
-      marginBottom: '5%'
+  navegacion: {
+    alignSelf: "center",
+    marginBottom: "5%"
   },
-avatarImg:{
-   alignSelf:'flex-end'
-},
-avatarCon:{
-   display:'flex',
-   alignSelf:'flex-end'
-}
+  avatarImg: {
+    alignSelf: "flex-end"
+  },
+  avatarCon: {
+    display: "flex",
+    alignSelf: "flex-end"
+  }
 });
 
 class App extends Component {
@@ -91,28 +99,23 @@ class App extends Component {
                 <Tab icon={<CachedIcon />} label="Nuevo" />
                 <Tab icon={<CategoryIcon />} label="Noticias" />
                 <Tab icon={<WhereToVoteIcon />} label="Notificaciones" />
-               
-            <ImgAvatar className={classes.avatarImg}/>
-          
+
+                <ImgAvatar className={classes.avatarImg} />
               </Tabs>
             </Paper>
           </Grid>
 
           <Grid item xs={12}>
-          <Grid container justify='center' spacing={16}>
-          {
-            imagenes.map((v,i) => (
-              <Grid key={i} item justify='center'>
-              <Noticia imagen={v}/>
-              </Grid>
-            ))
-          }
+            <Grid container justify="center" spacing={8}>
+              {imagenes.map((v, i) => (
+                <Grid key={i} item>
+                  <Noticia imagen={v} />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
-
-          </Grid>
+          <Footer />
         </Grid>
-        
-
       </React.Fragment>
     );
   }
